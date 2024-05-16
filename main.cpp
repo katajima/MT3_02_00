@@ -115,10 +115,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 		ImGui::Begin("Window");
 		ImGui::DragFloat3("CameraTranslate", &cameraPosition.x, 0.01f);
-		ImGui::DragFloat3("CameraTranslate", &cameraRotate.x, 0.01f);
+		ImGui::DragFloat3("cameraRotate", &cameraRotate.x, 0.01f);
 		ImGui::InputFloat3("project", &project.x, "%.3f", ImGuiInputTextFlags_ReadOnly);
-		//ImGui::DragFloat3("SphereCenter", &sphere.center.x, 0.01f);
-		//ImGui::DragFloat("SphereRadius", &sphere.radius, 0.01f);
+		ImGui::InputFloat3("segment.origin", &segment.origin.x, "%.3f", ImGuiInputTextFlags_ReadOnly);
+		ImGui::InputFloat3("segment.diff", &segment.diff.x, "%.3f", ImGuiInputTextFlags_ReadOnly);
+		ImGui::InputFloat3("point", &point.x, "%.3f", ImGuiInputTextFlags_ReadOnly);
 		ImGui::End();
 
 		///
